@@ -25,54 +25,54 @@
                     <div class="card" style="border-radius: 15px;">
                         <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5">Create an account</h2>
-                                <div class="form-outline mb-4">
-                                    <input oninput="validate()" type="text" id="name"
-                                           class="form-control form-control-lg"/>
-                                    <label id="validate-name" class="form-label" for="name">Your Name</label>
-                                </div>
+                            <div class="form-outline mb-4">
+                                <input oninput="validate()" type="text" id="name"
+                                       class="form-control form-control-lg"/>
+                                <label id="validate-name" class="form-label" for="name">Your Name</label>
+                            </div>
 
-                                <div class="form-outline mb-4">
-                                    <input oninput="validate()" type="text" id="userName"
-                                           class="form-control form-control-lg"/>
-                                    <label id="validate-username" class="form-label" for="userName">Username</label>
-                                </div>
+                            <div class="form-outline mb-4">
+                                <input oninput="validate()" type="text" id="userName"
+                                       class="form-control form-control-lg"/>
+                                <label id="validate-username" class="form-label" for="userName">Username</label>
+                            </div>
 
-                                <div class="form-outline mb-4">
-                                    <input oninput="validate()" type="email" id="email"
-                                           class="form-control form-control-lg"/>
-                                    <label class="form-label" id="validate-email" for="email">Your Email</label>
-                                </div>
+                            <div class="form-outline mb-4">
+                                <input oninput="validate()" type="email" id="email"
+                                       class="form-control form-control-lg"/>
+                                <label class="form-label" id="validate-email" for="email">Your Email</label>
+                            </div>
 
-                                <div class="form-outline mb-4">
-                                    <input oninput="validate()" type="password" id="password"
-                                           class="form-control form-control-lg"/>
-                                    <label class="form-label" id="validate-password" for="password">Password</label>
-                                </div>
+                            <div class="form-outline mb-4">
+                                <input oninput="validate()" type="password" id="password"
+                                       class="form-control form-control-lg"/>
+                                <label class="form-label" id="validate-password" for="password">Password</label>
+                            </div>
 
-                                <div class="form-outline mb-4">
-                                    <input oninput="validate()" type="password" id="re-password"
-                                           class="form-control form-control-lg"/>
-                                    <label class="form-label" id="validate-re" for="re-password">Repeat your
-                                        password</label>
-                                </div>
+                            <div class="form-outline mb-4">
+                                <input oninput="validate()" type="password" id="re-password"
+                                       class="form-control form-control-lg"/>
+                                <label class="form-label" id="validate-re" for="re-password">Repeat your
+                                    password</label>
+                            </div>
 
-                                <div class="form-check d-flex justify-content-center mb-5">
-                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg"/>
-                                    <label class="form-check-label">
-                                        I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
-                                    </label>
-                                </div>
+                            <div class="form-check d-flex justify-content-center mb-5">
+                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg"/>
+                                <label class="form-check-label">
+                                    I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                                </label>
+                            </div>
 
-                                <div class="d-flex justify-content-center">
-                                    <button onclick="register()" type="button"
-                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
-                                        Register
-                                    </button>
-                                </div>
+                            <div class="d-flex justify-content-center">
+                                <button onclick="register()" type="button"
+                                        class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                                    Register
+                                </button>
+                            </div>
 
-                                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
-                                                                                                        class="fw-bold text-body"><u>Login
-                                    here</u></a></p>
+                            <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
+                                                                                                    class="fw-bold text-body"><u>Login
+                                here</u></a></p>
                         </div>
                     </div>
                 </div>
@@ -143,9 +143,10 @@
                 document.getElementById('validate-email').innerHTML = '<label style="color: red">The email is invalid!</label>';
                 checkValidate = false;
             } else {
+                // Kiểm tra xem đã tồn tại email chưa
                 let checkEmailExisted = false;
                 for (let i = 0; i < listUser.length; i++) {
-                    if (email === listUser[i].email) {
+                    if (email == listUser[i].email) {
                         checkEmailExisted = true;
                         break;
                     }
