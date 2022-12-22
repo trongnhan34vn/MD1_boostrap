@@ -68,6 +68,7 @@
     let password;
     let listUser = JSON.parse(localStorage.getItem('list_user'));
     let checkValidate = false;
+    let currentUser;
     console.log(listUser)
 
     function validate() {
@@ -102,6 +103,7 @@
                     checkPass = true;
                     checkValidate = true;
                     document.querySelector('#validate-password').innerHTML = '';
+                    currentUser = listUser[i].username;
                 } else {
                     if (email === listUser[i].email && password !== listUser[i].password) {
                         checkPass = false;
@@ -114,12 +116,11 @@
 
     function login() {
         if (checkValidate) {
-
-            localStorage.removeItem('list_user');
-            localStorage.setItem('list_user', JSON.stringify(listUser));
-            location.href = '/index.html';
+            localStorage.setItem('current-user',currentUser); // cách thức tạo key và đẩy dữ liệu lên localStorage
+            location.href = '../../index.html';
         }
     }
+
 </script>
 </body>
 </html>

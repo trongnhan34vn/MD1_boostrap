@@ -1,0 +1,23 @@
+.user-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.user-icon:hover user-name {
+    opacity: 0.1;
+}
+
+.user-name {
+    display: inline-block;
+    margin: 0;
+}
+
+.user-name-img {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    margin-right: 10px;
+    border-radius: 50%;
+}
