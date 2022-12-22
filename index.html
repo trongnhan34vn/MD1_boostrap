@@ -187,13 +187,14 @@
     console.log(currentUser)
     if (currentUser) {
         document.getElementById("navbarDropdown").innerText = currentUser;
-    }
-
-    function logOut() {
         let register = document.querySelector('#register');
         register.style.display = 'none';
         let login = document.querySelector('#login');
         login.style.display = 'none';
+    }
+
+    function logOut() {
+
         localStorage.removeItem("current-user");
         location.reload();
     }
